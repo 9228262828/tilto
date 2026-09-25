@@ -1,0 +1,88 @@
+
+:root{
+  --navy:#101A2B;
+  --panel:#1C2940;
+  --coral:#FF6B4A;
+  --aqua:#43D7C5;
+  --cream:#FFF6E9;
+  --yellow:#FFD166;
+  --muted:#B5C0CC;
+  --line:#2C3D59;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--cream);
+  background:
+    radial-gradient(circle at 10% 0%,rgba(67,215,197,.12),transparent 30%),
+    radial-gradient(circle at 90% 6%,rgba(255,107,74,.10),transparent 28%),
+    var(--navy);
+  line-height:1.72;
+}
+a{color:var(--aqua);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:auto;padding:28px 20px 72px}
+.hero,.article{
+  background:rgba(28,41,64,.96);
+  border:1px solid var(--line);
+  box-shadow:0 24px 80px rgba(0,0,0,.25);
+}
+.hero{padding:44px;border-radius:30px}
+.article{margin-top:22px;padding:32px;border-radius:26px}
+.badge{
+  display:inline-flex;
+  padding:7px 13px;
+  border-radius:999px;
+  background:rgba(67,215,197,.10);
+  border:1px solid rgba(67,215,197,.22);
+  color:var(--aqua);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+h1{font-size:clamp(38px,7vw,64px);line-height:1;margin:16px 0 12px}
+h2{font-size:25px;margin-top:34px;margin-bottom:8px}
+p,li{color:#E0E5EB}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:24px}
+.card{
+  padding:20px;
+  border-radius:22px;
+  background:#162238;
+  border:1px solid var(--line);
+}
+.card strong{display:block;margin-bottom:6px;color:var(--cream)}
+.nav{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 0}
+.btn{
+  display:inline-block;
+  padding:11px 16px;
+  border-radius:14px;
+  background:var(--coral);
+  color:white;
+  font-weight:900;
+}
+.btn.alt{
+  background:#162238;
+  border:1px solid var(--line);
+  color:var(--cream);
+}
+.notice{
+  padding:17px 19px;
+  border-radius:16px;
+  background:rgba(67,215,197,.08);
+  border-left:4px solid var(--aqua);
+  color:#DFFBF6;
+}
+code{
+  background:#162238;
+  padding:3px 7px;
+  border-radius:8px;
+  color:var(--yellow);
+}
+footer{margin-top:30px;color:var(--muted);font-size:14px}
+@media(max-width:600px){
+  .wrap{padding:18px 14px 50px}
+  .hero,.article{padding:22px}
+}
